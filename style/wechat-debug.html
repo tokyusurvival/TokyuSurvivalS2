@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    .chat-panel{
+      margin:auto;
+      width:400px;
+      padding:20px 10px;
+      border: solid slategrey 1px;
+    }
+    .chat-head{
+      position:relative;
+      background:#111111;
+      text-align:center;
+      line-height: 3;
+
+    }
+    .wechat-message{
+      position:relative;
+      width:300px;
+      border-radius:10px;
+      background:#9EEA6A;
+      padding:10px;
+      line-height: 1.5;
+      margin-top:10px;
+    }
+    .content-left{
+      background:#DDDDDD;
+      margin-left: 10px;
+    }
+    .content-right{
+      margin-left: 70px;
+    }
+    .content-left::before{
+      content:"";
+      position: absolute;
+      top:20px;
+      left:-20px;
+      border-width:10px 10px 10px 10px;
+      border-color:transparent #DDDDDD transparent transparent ;
+      border-style:solid;
+    }
+
+    .content-right::after{
+      content:"";
+      position: absolute;
+      top:20px;
+      left:320px;
+      border-width:10px 10px 10px 10px;
+      border-color:transparent transparent transparent  #9EEA6A;
+      border-style:solid;
+    }
+  </style>
+</head>
+<body>
+<div class="chat-panel" style="background-color:#000000">
+    <div class="chat-head" style="color:white">
+        <h4>辅导员</h4>
+    </div>
+    <div class="content-left wechat-message" style="color:#000000">
+        {{player.name}}，最近文部省放宽了返乡限制，你有没有打算回家呀？
+    </div>
+    <div class="content-right wechat-message" style="color:#000000">
+        老师，近期期末临近，学业比较繁重。我还是打算再等一阵儿，把返乡时间和期末错开，集中精力完成学业。
+    </div>
+    <div class="content-left wechat-message" style="color:#000000">
+        学业忙，老师都很理解。不过还是建议你趁现在返乡吧。
+    </div>
+    <div class="content-left wechat-message" style="color:#000000">
+        接下来这一周是文部省给学生争取出来的时间窗口，这段时间专门向咱们高校学生开放售票，保证想回家的学生都能回家。
+    </div>
+    <div class="content-left wechat-message" style="color:#000000">
+        过了这一周，整个铁道系统就会面向东京市民全面开放，
+    </div>
+    <div class="content-left wechat-message" style="color:#000000">
+        过到时候所有市民可都会涌进售票系统，学生想买票也不一定买得着了。错过了这个窗口，想要再回家就很难了。
+    </div>
+    <div class="content-left wechat-message" style="color:#000000">
+        你想好了吗？确定不返乡吗？
+    </div>
+</div>
+</body>
+</html>

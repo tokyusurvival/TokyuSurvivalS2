@@ -1,0 +1,45 @@
+<!--
+微信聊天内容编写步骤：
+1. 可以按照模板编辑对话内容，仅需要改动文本和对话框朝向：
+   - 对方消息的class为"content-left chat-message"，我方消息的class为"content-right chat-message"
+   - 注意在"chat-head"这个class中修改对话者的名字
+2. 用html格式化软件把多行文本压缩成一行，例如 http://www.senlt.cn/formathtml/ （点击“压缩html）
+3. 在压缩好的文本前加上 'nvl ,文本后加上 '(即 'nvl 文本',),
+4. 讲以上文本插入js文件中对应位置
+【示例见文档末尾】
+5. to会代码的小伙伴，对话框css文档位置在 engine/core/monogatari.css 中标注“手机聊天界面”部分，目前是全局css，可以根据情况修改
+6、to会代码的小伙伴，微信界面的完整（调试）文档在 style/wechat-debug.html，可以在那里调整css样式并即时查看效果。
+  但是网页界面和放到monogatari的大小还是有些差别，还需要放到monogatari进行微调（或者直接在monogatari调试）
+-->
+
+
+<div class="chat-panel">
+    <div class="chat-head" style="color:white">
+        <h6>辅导员</h6>
+    </div>
+    <div class="content-left chat-message" style="color:#000000">
+        {{player.name}}，最近文部省放宽了返乡限制，你有没有打算回家呀？
+    </div>
+    <div class="content-right chat-message" style="color:#000000">
+        老师，近期期末临近，学业比较繁重。我还是打算再等一阵儿，把返乡时间和期末错开，集中精力完成学业。
+    </div>
+    <div class="content-left chat-message" style="color:#000000">
+        学业忙，老师都很理解。不过还是建议你趁现在返乡吧。
+    </div>
+    <div class="content-left chat-message" style="color:#000000">
+        接下来这一周是文部省给学生争取出来的时间窗口，这段时间专门向咱们高校学生开放售票，保证想回家的学生都能回家。
+    </div>
+    <div class="content-left chat-message" style="color:#000000">
+        过了这一周，整个铁道系统就会面向东京市民全面开放，
+    </div>
+    <div class="content-left chat-message" style="color:#000000">
+        过到时候所有市民可都会涌进售票系统，学生想买票也不一定买得着了。错过了这个窗口，想要再回家就很难了。
+    </div>
+    <div class="content-left chat-message" style="color:#000000">
+        你想好了吗？确定不返乡吗？
+    </div>
+</div>
+
+<!--
+'nvl <div class="chat-panel"> <div class="chat-head" style="color:white"> <h6>辅导员</h6> </div> <div class="content-left chat-message" style="color:#000000"> {{player.name}}，最近文部省放宽了返乡限制，你有没有打算回家呀？ </div> <div class="content-right chat-message" style="color:#000000"> 老师，近期期末临近，学业比较繁重。我还是打算再等一阵儿，把返乡时间和期末错开，集中精力完成学业。 </div> <div class="content-left chat-message" style="color:#000000"> 学业忙，老师都很理解。不过还是建议你趁现在返乡吧。 </div> <div class="content-left chat-message" style="color:#000000"> 接下来这一周是文部省给学生争取出来的时间窗口，这段时间专门向咱们高校学生开放售票，保证想回家的学生都能回家。 </div> <div class="content-left chat-message" style="color:#000000"> 过了这一周，整个铁道系统就会面向东京市民全面开放， </div> <div class="content-left chat-message" style="color:#000000"> 过到时候所有市民可都会涌进售票系统，学生想买票也不一定买得着了。错过了这个窗口，想要再回家就很难了。 </div> <div class="content-left chat-message" style="color:#000000"> 你想好了吗？确定不返乡吗？ </div></div>',
+-->
