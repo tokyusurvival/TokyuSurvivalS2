@@ -42,19 +42,12 @@ class LevelScreen extends Monogatari.ScreenComponent {
 LevelScreen.tag = 'level-screen';
 
 $_ready (() => {
-    monogatari.registerListener ('level2', {
-        callback: (event) => {
-            monogatari.global ('playing', true);
-            monogatari.showScreen ('game');
-            monogatari.run ("jump persuade-agree");
-        }
+  monogatari.registerListener ('level2', {
+    callback: (event) => {
+        if(localStorage.getItem('persuade-agree')=='1'){
+          monogatari.global ('playing', true);
+          monogatari.showScreen ('game');
+          monogatari.run ("jump persuade-agree")};
+    }
     });
-
-    monogatari.registerListener ('level3', {
-        callback: (event) => {
-            monogatari.global ('playing', true);
-            monogatari.showScreen ('game');
-            monogatari.run ("jump return-not");
-        }
-    });
-});
+})

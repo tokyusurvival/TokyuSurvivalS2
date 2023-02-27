@@ -95,3 +95,11 @@ function add_health(value){
         audio_stats_down.play()
     }
 }
+
+function unlock_level(level){
+  localStorage.setItem(level,1);
+}
+
+function lock_level(level){
+  localStorage.setItem(level,0);
+}

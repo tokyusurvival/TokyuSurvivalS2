@@ -130,7 +130,8 @@ monogatari.assets ('scenes', {
 // Define the Characters
 monogatari.characters ({
 	'i': {
-		name: '{{player.name}}',
+		// name: '{{player.name}}',
+    name: '你',
 		color: 'rgb(234, 131, 0)',
 	},
 	's': {
@@ -219,6 +220,10 @@ monogatari.$('next_day', {
 	}
 });
 
+// 显示画廊
+monogatari.$('show-gallery', 'nvl <gallery-screen class="animated active vertical horizontal--high middle text--center" data-component="gallery-screen" data-screen="gallery"></gallery-screen>'
+);
+
 /**
  * =======================================
  * 
@@ -233,6 +238,7 @@ monogatari.script ({
 	'Start': [
 		'show canvas stats',
 		'$ set_stats_size',
+    'jump E60-BE',
 	],
 
 	'ending': [
