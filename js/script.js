@@ -233,6 +233,7 @@ monogatari.script ({
 	'Start': [
 		'show canvas stats',
 		'$ set_stats_size',
+		'jump 0-notice-return-tk',
 	],
 
 	'ending': [
