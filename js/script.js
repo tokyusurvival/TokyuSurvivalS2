@@ -237,6 +237,13 @@ monogatari.script ({
 	'Start': [
 		'show canvas stats',
 		'$ set_stats_size',
+    // 解锁世界线
+    {'Function':{
+      'Apply':function(){
+        unlock_level('level-E6');
+      },
+      'Reverse':''
+    }},
 		'jump 0-notice-return-tk',
 	],
 

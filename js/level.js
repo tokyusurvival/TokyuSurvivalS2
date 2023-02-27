@@ -30,10 +30,8 @@ class LevelScreen extends Monogatari.ScreenComponent {
             <button class="top left" data-action="back"><span class="fas fa-arrow-left"></span></button>
             <h2 data-string="Level">Level</h2>
             <div class="row row--spaced" data-content="help">
-                <p>Your Content goes here!</p>
-                <button data-action="start">Go to Level 1</button>
-                <button data-action="level2">Go to Level 2</button>
-                <button data-action="level3">Go to Level 3</button>
+                <button data-action="level-0">0 返校之前</button>
+                <button data-action="level-E6">E6 宫墙绿柳红砂（上）</button>
             </div>
         `;
     }
@@ -42,12 +40,21 @@ class LevelScreen extends Monogatari.ScreenComponent {
 LevelScreen.tag = 'level-screen';
 
 $_ready (() => {
-  monogatari.registerListener ('level2', {
+    monogatari.registerListener ('level-0', {
     callback: (event) => {
-        if(localStorage.getItem('persuade-agree')=='1'){
+        if(localStorage.getItem('level-0') =='1'){
           monogatari.global ('playing', true);
           monogatari.showScreen ('game');
-          monogatari.run ("jump persuade-agree")};
+          monogatari.run ("jump 0-notice-return-tk")};
+    }
+    });
+
+    monogatari.registerListener ('level-E6', {
+    callback: (event) => {
+        if(localStorage.getItem('level-E6') =='1'){
+          monogatari.global ('playing', true);
+          monogatari.showScreen ('game');
+          monogatari.run ("jump E60-BE")};
     }
     });
 })

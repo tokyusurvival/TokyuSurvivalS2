@@ -20,7 +20,7 @@
  * 			如果程序员已对以上部分进行了优化，请在此条下留言已优化的部分，并且指出待优化的问题，以便后续进一步工作。
  * 
  *  20230237 【高】完成p1编写（缺tj1和gn4立绘、鸟鸣白噪音和部分bg）。
- *            立绘已抠背景。
+ *            立绘已抠背景。转p2部分尚未完成
  * =======================================
  **/
 
@@ -88,6 +88,28 @@ monogatari.characters ({
 	 **/
 	'E60-BE': [
         //下文为【世界变异】段的描述
+        // 解锁世界线
+
+        {'Function':{
+          'Apply':function(){
+            if(monogatari.storage('player').name==''){
+                this.storage ({
+                  player: {
+                    name: localStorage.getItem('player_name')
+                  }
+                })
+            }
+          },
+          'Reverse':'',
+        }},
+        {'Function':{
+          'Apply':function(){
+            unlock_level('level-E6');
+          },
+          'Reverse':function(){
+            lock_level('level-E6')
+          },
+        }},
         'show character d normal',
         's 不知道为什么，最近几天，每次做完核酸以后，喉咙总有点不舒服，嗓子干干的，总想要咳嗽',
         's 从上一次做完核酸到下一次核酸之前，干咳的冲动呈衰减趋势，然而每次核酸总能激发新的冲动，于是它的函数图像呈现出诡异的周期性',

@@ -52,6 +52,15 @@ monogatari.storage ({
 	 * ====================================
 	 **/
 	'0-notice-return-tk': [
+        // 解锁世界线
+        {'Function':{
+          'Apply':function(){
+            unlock_level('level-0');
+          },
+          'Reverse':function(){
+            lock_level('level-0')
+          },
+        }},
         'show scene laptop',
         's 你收到了一条群聊公告',
         'play sound notification',
@@ -222,6 +231,15 @@ monogatari.storage ({
         江戸文收到
         班长：现在统计学生的返校意愿，如果决定开学时返校的，请选择“是”，如果决定不返校的，请选择“否”。
         */
+        {'Function':{
+          'Apply':function(){
+            localStorage.setItem('player_name',monogatari.storage('player').name)
+          },
+          'Reverse':function(){
+            const name = monogatari.storage('player');
+            localStorage.setItem('player_name','')
+          },
+        }},
         'i 啊……该来的终究还是逃不过……',
         'i 上半年因为疫情封控，在东急被封了大半学期，那经历真是让人永生难忘。',
         //闪回s1画面：紧急封校通知+志愿者排班，物资缺乏，毛猪肉，红蓝条 etc +返乡结局
