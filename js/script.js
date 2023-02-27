@@ -130,8 +130,7 @@ monogatari.assets ('scenes', {
 // Define the Characters
 monogatari.characters ({
 	'i': {
-		// name: '{{player.name}}',
-    name: '你',
+		name: '{{player.name}}',
 		color: 'rgb(234, 131, 0)',
 	},
 	's': {
@@ -238,7 +237,7 @@ monogatari.script ({
 	'Start': [
 		'show canvas stats',
 		'$ set_stats_size',
-    'jump E60-BE',
+		'jump 0-notice-return-tk',
 	],
 
 	'ending': [
