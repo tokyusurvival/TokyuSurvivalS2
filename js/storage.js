@@ -103,3 +103,7 @@ function unlock_level(level){
 function lock_level(level){
   localStorage.setItem(level,0);
 }
+
+function check_level(level){
+    return localStorage.getItem(level);
+}

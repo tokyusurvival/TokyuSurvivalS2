@@ -163,6 +163,38 @@ message-modal button:hover{
 	border-width: 2px;
 }
 
+level-screen button{
+	background-color:#070707;
+	width:100%;
+	height: calc(100%);
+	margin: 0;
+}
+level-screen [button-type="locked"]{
+	background-color:#b9b9b9;
+}
+level-screen [button-type="palace"]{
+	background-color:#8f3c3c;
+}
+[data-content="levels"] {
+	width: 100%;
+	max-width: 800px;
+	align-self: center;
+
+}
+[data-content="level-layer"] {
+	margin-bottom: 100px;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 90px;
+	display: flex;
+}
+[data-content="level-layer"]>[class="button-wrapper"] {
+	width:100%;
+	margin-left: 5%;
+	margin-right: 5%;
+	max-width: 90px;
+}
+
 
 /* Character Name Style */
 [data-ui="who"] {
